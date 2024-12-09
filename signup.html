@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cadastre-se | Carinhos e Patas</title>
+  </head>
+  <body>
+    <div class="sign-background"></div>
+    <form>
+      <h3>Cadastre-se</h3>
+
+      <label for="username">E-mail</label>
+      <input type="text" placeholder="Insira seu e-mail" id="username" />
+
+      <label for="password">Senha</label>
+      <input type="password" placeholder="Insira sua senha" id="password" />
+
+      <a href="./login.html"
+        >Já possui uma conta? <span id="sign-link">Entrar</span></a
+      >
+
+      <button>Cadastrar</button>
+    </form>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signupForm = document.getElementById("signupForm");
+
+        signupForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            alert("As senhas não coincidem. Tente novamente.");
+            return;
+          }
+
+          try {
+            const response = await fetch("http://localhost:8080/api/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, password }),
+            });
+
+            if (response.ok) {
+              alert("Cadastro realizado com sucesso!");
+              window.location.href = "/login";
+            } else {
+              alert("Erro no cadastro. Verifique os dados e tente novamente.");
+            }
+          } catch (error) {
+            console.error("Erro ao conectar ao servidor:", error);
+            alert("Erro ao conectar ao servidor. Tente novamente mais tarde.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

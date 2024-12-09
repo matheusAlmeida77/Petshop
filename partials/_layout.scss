@@ -1,0 +1,426 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+// BG HOME
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.02), #06121e),
+    url("https://img.freepik.com/free-photo/flat-lay-toys-with-food-bowl-fur-brush-dogs_23-2148949620.jpg?t=st=1733745053~exp=1733748653~hmac=1aa77240335b53050f99ccaa015f4e6f619c227b5c05782009238f4bcb9c3ee1&w=1380");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+// HERO
+
+.hero {
+  color: $white-normal;
+  min-height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+
+  h1 {
+    text-align: center;
+    line-height: 150%;
+    max-width: 940px;
+    font-size: 46px;
+  }
+
+  p {
+    text-align: center;
+    margin: 14px 0;
+  }
+
+  .button-contact {
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+  }
+
+  .button-contact:hover {
+    animation: scaleButton 0.5s alternate infinite;
+  }
+
+  @keyframes scaleButton {
+    from {
+      scale: (1);
+    }
+    to {
+      scale: (1.07);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 60dvh;
+
+    h1 {
+      font-size: 34px;
+      padding: 0 14px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+
+// ABOUT
+
+.about {
+  background-color: $primary-normal;
+  overflow: hidden;
+  color: $white-normal;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+
+  img {
+    max-width: 570px;
+  }
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description {
+  h2 {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 14px;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+// SERVICES
+
+.services {
+  background-color: $white-normal;
+  color: $black-normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.pet-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.pet-service {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-normal;
+  border-radius: 8px;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    max-width: 354px;
+    height: 220px;
+    transition: 0.3s;
+  }
+}
+
+.pet-service img:hover {
+  scale: 1.2;
+  z-index: 1;
+}
+
+.service-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: $white-normal;
+  z-index: 99;
+}
+
+.service-info button {
+  color: $white-normal;
+  background-color: $red-normal;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .pet-services {
+    flex-direction: column;
+  }
+
+  .pet-service img {
+    max-width: 740px;
+  }
+}
+
+// FOOTER
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 24px;
+  color: $white-normal;
+
+  p {
+    text-align: center;
+  }
+}
+
+footer div img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 18px;
+  color: $white-normal;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 14px;
+  z-index: 99;
+
+  img {
+    max-width: 74px;
+    transition: 0.5s;
+  }
+
+  img:hover {
+    scale: 1.1;
+  }
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -144px;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: $black-normal;
+  color: $white-normal;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp {
+    img {
+      max-width: 64px;
+    }
+  }
+}
+
+// LOGIN
+.login-background {
+  width: 100%;
+  min-height: 100dvh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background-image: url("https://img.freepik.com/free-photo/top-view-pet-food-with-toys_23-2148949563.jpg?t=st=1733749429~exp=1733753029~hmac=a882ffb4375e01b470db80c23f88f538cf775a740013f158b8a474df1f5d43a2&w=1060");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sign-background {
+  width: 100%;
+  min-height: 100dvh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background-image: url("https://img.freepik.com/free-photo/top-view-pet-accessories-food_23-2148949562.jpg?t=st=1733749398~exp=1733752998~hmac=d96567511cab437c5bf0ec848f06fed8632eae86d465165c30660619d444f8ae&w=1060");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.schedule-background{
+    width: 100%;
+    min-height: 100dvh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-image: url("https://img.freepik.com/free-photo/top-view-pet-accessories-food_23-2148949562.jpg?t=st=1733749398~exp=1733752998~hmac=d96567511cab437c5bf0ec848f06fed8632eae86d465165c30660619d444f8ae&w=1060");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+
+form * {
+  color: #000000;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.167);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+::placeholder {
+  color: #272727;
+}
+form a {
+  display: block;
+  margin-top: 1rem;
+}
+#sign-link {
+  color: #5588ff;
+}
+form button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #4ba7e9e2;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+// PET REGISTER
+#pet-register,
+#schedule-form {
+  overflow-y: auto;
+  height: 650px;
+  width: 500px;
+
+  select {
+    margin-top: 10px;
+    background-color: rgb(234, 234, 234);
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #pet-register,
+  #schedule-form {
+    width: 450px;
+    height: 630px;
+  }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Carinhos e Patas - Seu Petshop!</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="bg-home">
+      <header>
+        <nav class="header-content container">
+          <div class="header-icons" data-aos="fade-down">
+            <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
+                <img
+                  data-aos="flip-up"
+                  data-aos-delay="300"
+                  data-aos-duration="1500"
+                  src="assets/logo.webp"
+                  alt="Logo do petshop"
+                />
+              </div>
+            <a href="#">
+              <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook fa-2x"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-tiktok fa-2x"></i>
+            </a>
+          </div>
+
+          <div class="header-links" data-aos="fade-down">
+            <a href="./service.scheduling.html">
+              <i class="fa-solid fa-plus fa-2x"></i>
+            </a>
+            <a href="./service.scheduling.html">
+              <i class="fa-regular fa-calendar fa-2x"></i>
+            </a>
+            <a href="./pet-register.html">
+              <i class="fa-solid fa-dog fa-2x"></i>
+            </a>
+            <a href="./login.html">
+              <i class="fa-regular fa-user fa-2x"></i>
+            </a>
+            <button id="menu" href="#">
+              <i class="fa-solid fa-bars fa-2x"></i>
+            </button>
+            <a
+              class="header-button"
+              href="https://api.whatsapp.com/send?phone=15981769200&text=Olá, gostaria de agendar um horário"
+              target="_blank"
+              >Agendar serviço</a
+            >
+          </div>
+        </nav>
+
+        <main data-aos="fade-up" data-aos-delay="400" class="hero container">
+          <h1>
+            Tudo para o bem-estar do seu amigo de quatro patas, em um só lugar!
+          </h1>
+          <p>Horário de Funcionamento: 09:00 ás 19:00</p>
+          <a class="button-contact" href="#" target="_blank">Agendar Horário</a>
+        </main>
+      </header>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <div class="about-content container">
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <img
+            src="https://blog.bling.com.br/wp-content/uploads/2024/01/como-abrir-pet-shop-1024x649.jpg?x99143"
+            alt="Imagem sobre a barbearia"
+          />
+        </div>
+
+        <div
+          data-aos="zoom-out-left"
+          data-aos-delay="250"
+          class="about-description"
+        >
+          <h2>SOBRE</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
+            amet cum illo quas dignissimos optio minima, eligendi corrupti
+            reiciendis rem architecto, ex iste voluptas laudantium placeat
+            inventore cumque distinctio alias.
+          </p>
+          <p>
+            Horário de Funcionamento: <strong>09:00</strong> ás
+            <strong>19:00</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="services-content container">
+        <h2>SERVIÇOS</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque
+          deleniti, eius quia error modi? Eligendi ab reprehenderit ratione
+          veniam distinctio, saepe necessitatibus inventore incidunt est neque
+          quas error aperiam.
+        </p>
+      </div>
+
+      <section class="pet-services">
+        <div data-aos="fade-up" data-aos-delay="150" class="pet-service">
+          <img
+            src="https://www.petconectadigital.com.br/source/files/c/18754/lindo-retrato-de-cachorro_23-2149218454-437688_996-664-0-0.jpg"
+            alt="Banho e Tosa"
+          />
+          <div class="service-info">
+            <strong>Banho e Tosa</strong>
+            <button>R$45,00</button>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="pet-service">
+          <img
+            src="https://clubinhocantinhodomascote.com.br/wp-content/uploads/2022/12/webpc-passthru.png"
+            alt="Hospedagem Animal"
+          />
+          <div class="service-info">
+            <strong>Hospedagem Animal</strong>
+            <button>R$85,00</button>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="450" class="pet-service">
+          <img
+            src="https://www.florence.edu.br/blog/wp-content/uploads/2021/08/Florence-dia-do-medico-veterinario.jpg"
+            alt="Veterinário"
+          />
+          <div class="service-info">
+            <strong>Veterinário</strong>
+            <button>R$35,00</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="services">
+      <h2>VENHA CONHECER</h2>
+    </div>
+
+    <iframe
+      width="100%"
+      ;
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14638.867453576335!2d-47.48704294385994!3d-23.470675451122563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f5a9089e7e91%3A0x101610d13ee905b1!2sShopping%20Cidade%20Sorocaba!5e0!3m2!1spt-BR!2sbr!4v1726943884091!5m2!1spt-BR!2sbr"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <footer class="footer">
+      <div class="footer-icons">
+        <a href="#">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+      </div>
+
+      <div>
+        <img src="assets/logo.webp" alt="Logo barbearia" />
+      </div>
+
+      <p>&copy; 2024 | Carinhos e Patas - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a
+      data-aos="zoom-in-up"
+      data-aos-delay="400"
+      class="btn-whatsapp"
+      href="https://api.whatsapp.com/send?phone=15981769200&text=Olá, gostaria de agendar um horário"
+      target="_blank"
+    >
+      <img src="assets/whatssapp.svg" alt="Botão whatsapp" />
+      <span class="tooltip-text">Agende seu horário</span>
+    </a>
+  </body>
+</html>

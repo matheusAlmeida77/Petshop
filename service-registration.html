@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Serviço</title>
+  </head>
+  <body>
+    <header>
+      <h1>Petshop - Registrar Serviço</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Cadastrar Serviço</h2>
+        <form id="service-form">
+          <div>
+            <label for="service-name">Nome do serviço</label>
+            <input
+              id="service-name"
+              type="text"
+              placeholder="Digite o serviço que você deseja"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="service-description">Descrição do serviço</label>
+            <textarea
+              id="service-description"
+              rows="4"
+              placeholder="Digite a descrição do serviço"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="service-price"></label>
+            <input
+              id="service-price"
+              type="number"
+              step="0.01"
+              placeholder="Digite o valor do serviço"
+              required
+            />
+          </div>
+
+          <button type="submit">Cadastrar Serviço</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Petshop - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const serviceForm = document.getElementById("service-form");
+        serviceForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const serviceName = document.getElementById("service-name").value;
+          const serviceDescription = document.getElementById("service-description").value;
+          const servicePrice = document.getElementById("service-price").value;
+
+          try {
+            const response = await fetch("http://localhost:8080/api/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ serviceName, serviceDescription, servicePrice }),
+            });
+
+            if (response.ok) {
+              alert("Login bem-sucedido!");
+              window.location.href = "./index";
+            } else {
+              alert("E-mail ou senha incorretos. Tente novamente.");
+            }
+          } catch (error) {
+            console.error("Erro ao conectar ao servidor:", error);
+            alert("Erro ao conectar ao servidor. Tente novamente mais tarde.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
